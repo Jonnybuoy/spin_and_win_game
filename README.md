@@ -4,7 +4,7 @@
 
 The program is about a text-based slot machine for example, like the ones found in casinos. The user deposits a certain amount of money,
 and uses it to bet on one of three lines. If they got the lines correct, then they win the bet, otherwise, they lose the bet. The lines
-have been programmed in terms of 3x3 matrix format.
+have been structured as a 3x3 matrix.
 
 ## Running the program.
 
