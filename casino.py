@@ -22,6 +22,7 @@ symbol_value = {
 }
 
 def check_winnings(columns, lines, bet, values):
+    """Check the number of lines that win the bet."""
     winnings = 0
     winning_lines = []
     for line in range(lines):
@@ -38,6 +39,7 @@ def check_winnings(columns, lines, bet, values):
         
 
 def get_slot_machine_spin(rows, cols, symbols):
+    """Spin the slot machine to get random symbols on columns."""
     all_symbols = []
     for symbol, symbol_count in symbols.items():
         for _ in range(symbol_count):
@@ -57,6 +59,7 @@ def get_slot_machine_spin(rows, cols, symbols):
     return columns
 
 def print_slot_machine(columns):
+    """Print the slot machine after spinning."""
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
@@ -68,6 +71,7 @@ def print_slot_machine(columns):
         
 
 def deposit():
+    """Request user to deposit some amount of cash."""
     while True:
         amount = input("What would you like to deposit? $")
         if amount.isdigit():
@@ -83,6 +87,7 @@ def deposit():
     return amount
 
 def get_number_of_lines():
+    """Request user to enter the number of lines to bet on."""
     while True:
         lines = input("Enter the number of lines to bet on (1-" + str(MAX_LINES) + ")? ")
         if lines.isdigit():
@@ -98,6 +103,7 @@ def get_number_of_lines():
     return lines
 
 def get_bet():
+    """Request user for the amount of cash they want to place their bets on."""
     while True:
         amount = input("What would you like to bet on each line? $")
         if amount.isdigit():
@@ -113,6 +119,7 @@ def get_bet():
     return amount
 
 def play(balance):
+    """Begin the game."""
     lines = get_number_of_lines()
     while True:
         bet = get_bet()
@@ -133,6 +140,7 @@ def play(balance):
     
 
 def main():
+    """Instantiate the game."""
     balance = deposit()
     while True:
         print(f"Current balance is ${balance}")
@@ -146,6 +154,6 @@ def main():
 
 
 
-
+# Call the main function.
 main()
     
